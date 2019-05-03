@@ -1,0 +1,91 @@
+{
+	"schemaVersion": "2.0.0",
+	"contractName": "OrganizationInterface",
+	"compilerOutput": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_worker",
+						"type": "address"
+					}
+				],
+				"name": "isWorker",
+				"outputs": [
+					{
+						"name": "isWorker_",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_organization",
+						"type": "address"
+					}
+				],
+				"name": "isOrganization",
+				"outputs": [
+					{
+						"name": "isOrganization_",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"evm": {
+			"bytecode": {
+				"linkReferences": {},
+				"object": "0x",
+				"opcodes": "",
+				"sourceMap": ""
+			},
+			"deployedBytecode": {
+				"linkReferences": {},
+				"object": "0x",
+				"opcodes": "",
+				"sourceMap": ""
+			}
+		}
+	},
+	"sources": {
+		"OrganizationInterface.sol": {
+			"id": 0
+		}
+	},
+	"sourceCodes": {
+		"OrganizationInterface.sol": "pragma solidity ^0.5.0;\n\n// Copyright 2019 OpenST Ltd.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//    http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n//\n// ----------------------------------------------------------------------------\n//\n// http://www.simpletoken.org/\n//\n// ----------------------------------------------------------------------------\n\n/**\n *  @title OrganizationInterface provides methods to check if an address is\n *         currently registered as an active participant in the organization.\n */\ninterface OrganizationInterface {\n\n    /**\n     * @notice Checks if an address is currently registered as the organization.\n     *\n     * @param _organization Address to check.\n     *\n     * @return isOrganization_ True if the given address represents the\n     *                         organization. Returns false otherwise.\n     */\n    function isOrganization(\n        address _organization\n    )\n        external\n        view\n        returns (bool isOrganization_);\n\n    /**\n     * @notice Checks if an address is currently registered as an active worker.\n     *\n     * @param _worker Address to check.\n     *\n     * @return isWorker_ True if the given address is a registered, active\n     *                   worker. Returns false otherwise.\n     */\n    function isWorker(address _worker) external view returns (bool isWorker_);\n\n}\n"
+	},
+	"sourceTreeHashHex": "0xac45d29a498c6531778e0a0cdb31c0d0c2fa6f090dfe9ff99e5ee056657e1962",
+	"compiler": {
+		"name": "solc",
+		"version": "soljson-v0.5.8+commit.23d335f2.js",
+		"settings": {
+			"optimizer": {
+				"enabled": false
+			},
+			"outputSelection": {
+				"*": {
+					"*": [
+						"abi",
+						"evm.bytecode.object",
+						"evm.bytecode.sourceMap",
+						"evm.deployedBytecode.object",
+						"evm.deployedBytecode.sourceMap"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"networks": {}
+}
