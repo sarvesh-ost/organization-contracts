@@ -1,4 +1,4 @@
-import {Organization} from "../types/web3-contracts/Organization";
+import {Organization} from "../interacts/Organization";
 
 const ganache = require("ganache-cli");
 
